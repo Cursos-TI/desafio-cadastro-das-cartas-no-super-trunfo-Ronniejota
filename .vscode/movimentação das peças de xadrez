@@ -1,1 +1,42 @@
+#include <stdio.h> // Inclui a biblioteca padrão de entrada e saída
 
+int main() {
+    // Simulação do movimento da Torre
+    // A Torre se move em linha reta horizontalmente ou verticalmente.
+    // Usaremos um loop 'for' para simular o movimento.
+    printf("--- Movimento da Torre ---\n");
+    int casasTorre = 5; // Número de casas que a Torre vai se mover
+    for (int i = 0; i < casasTorre; i++) {
+        printf("Direita\n"); // A Torre se move cinco casas para a direita
+    }
+    printf("\n"); // Adiciona uma linha em branco para melhor legibilidade
+
+    // Simulação do movimento do Bispo
+    // O Bispo se move na diagonal.
+    // Usaremos um loop 'while' para simular o movimento.
+    printf("--- Movimento do Bispo ---\n");
+    int casasBispo = 5; // Número de casas que o Bispo vai se mover
+    int contadorBispo = 0; // Contador para o loop while
+    while (contadorBispo < casasBispo) {
+        // O Bispo se move na diagonal para cima e à direita
+        printf("Cima, Direita\n"); 
+        contadorBispo++; // Incrementa o contador
+    }
+    printf("\n"); // Adiciona uma linha em branco para melhor legibilidade
+
+    // Simulação do movimento da Rainha
+    // A Rainha se move em todas as direções.
+    // Usaremos um loop 'do-while' para simular o movimento.
+    printf("--- Movimento da Rainha ---\n");
+    int casasRainha = 8; // Número de casas que a Rainha vai se mover
+    int contadorRainha = 0; // Contador para o loop do-while
+    if (casasRainha > 0) { // Garante que o loop execute pelo menos uma vez se casasRainha for maior que 0
+        do {
+            printf("Esquerda\n"); // A Rainha se move oito casas para a esquerda
+            contadorRainha++; // Incrementa o contador
+        } while (contadorRainha < casasRainha);
+    }
+    printf("\n"); // Adiciona uma linha em branco para melhor legibilidade
+
+    return 0; // Retorna 0 para indicar que o programa foi executado com sucesso
+}
